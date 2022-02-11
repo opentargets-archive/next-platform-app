@@ -1,7 +1,7 @@
 import React from 'react';
 import { faPrescriptionBottleAlt } from '@fortawesome/free-solid-svg-icons';
 
-import { ExternalLink } from '../../components/';
+import { ExternalLink } from '../../components/ExternalLink';
 import HeaderBase from '../../components/Header';
 
 function DrugHeader({ loading, chemblId, name, crossReferences }) {

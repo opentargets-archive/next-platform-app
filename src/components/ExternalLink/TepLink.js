@@ -2,13 +2,12 @@ import React from 'react';
 import HelpIcon from '@material-ui/icons/Help';
 import { makeStyles, Tooltip } from '@material-ui/core';
 import { useQuery } from '@apollo/client';
-import { loader } from 'graphql.macro';
+// import { loader } from 'graphql.macro';
 
+import TEP_LINK_QUERY from './TepLinkQuery.gql';
 import Link from '../Link';
 
-const TEP_LINK_QUERY = loader('./TepLinkQuery.gql');
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   helpIcon: {
     fontSize: '10px',
   },
