@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLazyQuery } from '@apollo/client';
 import {
-  Box,
   CircularProgress,
   Input,
   InputBase,
@@ -116,7 +115,9 @@ function Search({ autoFocus = false, embedded = false }) {
   const classes = useStyles();
 
   return (
-    <Box className={!embedded ? classes.container : classes.containerEmbedded}>
+    // <Box className={classNames({ [classes.container]: !embedded,
+    //   [classes.container]: !embedded, })}>
+    <div className={!embedded ? classes.container : classes.containerEmbedded}>
       <Autocomplete
         autoHighlight
         freeSolo
@@ -193,7 +194,7 @@ function Search({ autoFocus = false, embedded = false }) {
         }
         value={inputValue}
       />
-    </Box>
+    </div>
   );
 }
 

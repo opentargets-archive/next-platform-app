@@ -10,11 +10,9 @@ const BasePage = ({ title, children, description, location }) => {
   return (
     <Page
       header={
-        <NavBar
-          name="Platform"
-          search={<Search embedded />}
-          items={mainMenuItems}
-        />
+        <NavBar name="Platform" items={mainMenuItems}>
+          <Search embedded />
+        </NavBar>
       }
       footer={<Footer externalLinks={externalLinks} />}
     >

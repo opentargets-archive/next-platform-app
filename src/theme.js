@@ -1,11 +1,12 @@
 import { lighten, darken } from 'polished';
+import { createTheme } from '@material-ui/core/styles';
 // import config from './config';
 
 // const PRIMARY = config.primaryColor;
 const PRIMARY = '#3489ca';
 const SECONDARY = '#ff6350';
 
-const theme = {
+const theme = createTheme({
   shape: {
     borderRadius: 0,
   },
@@ -127,6 +128,6 @@ const theme = {
       },
     },
   },
-};
+});
 
 export default theme;

@@ -69,7 +69,6 @@ const MenuExternalLink = ({ classes, href, children }) => (
 const NavBar = ({
   classes,
   name,
-  search,
   api,
   downloads,
   docs,
@@ -77,6 +76,7 @@ const NavBar = ({
   homepage,
   items,
   placement,
+  children,
 }) => {
   const theme = useTheme();
   const smMQ = useMediaQuery(theme.breakpoints.down('sm'));
@@ -99,7 +99,7 @@ const NavBar = ({
           </RouterLink>
         )}
         <div className={classes.flex} />
-        {search ? search : null}
+        {children}
 
         {docs ? (
           <MenuExternalLink classes={classes} href={docs}>
