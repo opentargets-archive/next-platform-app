@@ -148,7 +148,9 @@ function Search({ autoFocus = false, embedded = false }) {
         popupIcon={open ? <ArrowDropDown /> : <SearchIcon />}
         renderOption={(option) => <Option data={option} />}
         renderGroup={(group) => (
-          <Group key={group.key} name={group.group} children={group.children} />
+          <Group key={group.key} name={group.group}>
+            {group.children}
+          </Group>
         )}
         renderInput={(params) =>
           !embedded ? (
